@@ -20,7 +20,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -38,19 +37,19 @@ import java.util.UUID;
 @MappedSuperclass
 public class BaseEntity {
 
-    public BaseEntity(UUID id, Long version, Timestamp createdDate, Timestamp lastModifiedDate) {
-        this.id = id;
+    public BaseEntity(UUID Id, Long version, Timestamp createdDate, Timestamp lastModifiedDate) {
+        this.id = Id;
         this.version = version;
         this.createdDate = createdDate;
         this.lastModifiedDate = lastModifiedDate;
     }
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-            name = "UUID",
-            strategy = "org.hibernate.id.UUIDGenerator"
-    )
+    //@GeneratedValue(generator = "UUID")
+   // @GenericGenerator(
+    //        name = "UUID",
+    //        strategy = "org.hibernate.id.UUIDGenerator"
+   // )
     @Type(type="org.hibernate.type.UUIDCharType")
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false )
     private UUID id;
