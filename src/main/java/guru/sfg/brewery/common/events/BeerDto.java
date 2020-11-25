@@ -1,4 +1,4 @@
-package common.events;
+package guru.sfg.brewery.common.events;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
