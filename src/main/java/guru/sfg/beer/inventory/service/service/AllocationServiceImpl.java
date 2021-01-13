@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
@@ -37,6 +38,11 @@ public class AllocationServiceImpl implements AllocationService {
         log.debug("Total Ordered: " + totalOrdered.get() + " Total Allocated: " + totalAllocated.get());
 
         return totalOrdered.get() == totalAllocated.get();
+    }
+
+    @Override
+    public void deallocateOrder(UUID orderId) {
+        log.debug("deallocate order...");
     }
 
     private void allocateBeerOrderLine(BeerOrderLineDto beerOrderLine) {
