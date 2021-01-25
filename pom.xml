@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>guru.springframework</groupId>
@@ -19,15 +19,14 @@
         <jaxb.version>3.0.0-M4</jaxb.version>
         <jaxbapi.version>2.3.0</jaxbapi.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <spring-cloud-dependency.version>3.0.0</spring-cloud-dependency.version>
+
     </properties>
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.statemachine</groupId>
-            <artifactId>spring-statemachine-core</artifactId>
-            <version>2.1.2.RELEASE</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-artemis</artifactId>
@@ -56,29 +55,26 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+<!--
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>${jaxbapi.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core -->
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-core</artifactId>
             <version>${jaxb.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
             <version>${jaxb.version}</version>
         </dependency>
 
-
+-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -114,7 +110,8 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>2.2.3.RELEASE</version>
+            <version>${spring-cloud-dependency.version}</version>
+
         </dependency>
     </dependencies>
 
@@ -139,6 +136,11 @@
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${lombok-mapstruct-binding.version}</version>
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
