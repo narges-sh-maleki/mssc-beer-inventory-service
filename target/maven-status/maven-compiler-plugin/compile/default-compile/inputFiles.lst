@@ -25,4 +25,5 @@
 /Users/mostafa.rastegar/Desktop/Narges/Mssc-brewery-ws/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/mappers/DateMapper.java
 /Users/mostafa.rastegar/Desktop/Narges/Mssc-brewery-ws/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/service/CancelOrderListener.java
 /Users/mostafa.rastegar/Desktop/Narges/Mssc-brewery-ws/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/web/mappers/BeerInventoryMapper.java
+/Users/mostafa.rastegar/Desktop/Narges/Mssc-brewery-ws/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/config/SecurityConfig.java
 /Users/mostafa.rastegar/Desktop/Narges/Mssc-brewery-ws/mssc-beer-inventory-service/src/main/java/guru/sfg/beer/inventory/service/repositories/BeerInventoryRepository.java
